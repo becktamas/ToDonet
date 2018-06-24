@@ -9,27 +9,26 @@ namespace ToDoAlkalmazas.Controllers
 {
     public class TodoController : Controller
     {
-        private List<TodoItem> lista = new List<TodoItem>
-            {
-                new TodoItem() { Name = "Cukor", Done = true },
-                new TodoItem() { Name = "Só", Done = false },
-                new TodoItem() { Name = "Kávé", Done = false },
-                new TodoItem() { Name = "Dió", Done = true }
-            };
-
+        [HttpGet, HttpPost]
         public ActionResult Index()
         {
             //Adatok
 
             //ViewBag.Lista = lista;
 
-            return View(lista);
+            return View(MyDb.Lista);
         }
+        [HttpGet]// a routing csak ekkor irányítja ide
+        public ActionResult Create()//Get
+        {
+            return View();
+        }
+        [HttpPost]
         public ActionResult Create(string Name)
         {
             if(!string.IsNullOrEmpty(Name))
             {
-                lista.Add(new TodoItem() { Name = Name, Done = true });
+                MyDb.Lista.Add(new TodoItem() { Name = Name, Done = true });
                 //Adatok mentése és vissza az Index-re
                 return RedirectToAction("Index");
             }

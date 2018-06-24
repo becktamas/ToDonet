@@ -9,20 +9,20 @@
 
 @*Ciklus*@
 <ol>
-    @foreach (var TodoItem in Model)
+    @foreach (var TodoItemOne in Model)
     {
-        if (TodoItem.Done)
+        if (TodoItemOne.Done)
         {
-            <li><strike>@TodoItem.Name</strike></li>
+            <li><strike>@TodoItemOne.Name</strike></li>
         }
         else
         {
-            <li>@TodoItem.Name</li>
+            <li>@TodoItemOne.Name</li>
         }
 
     }
 </ol>
 @*Mindkét megoldás jó*@
-<a href="/todo/create">Új felvitele</a>
+<a href="/Todo/Create">Új felvitele</a>
 @*A saját kontrolllerben keresi*@
 @Html.ActionLink("Új adat", "Create");

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using ToDoAlkalmazas.Models;
 
 namespace ToDoAlkalmazas.Controllers
 {
@@ -22,20 +23,6 @@ namespace ToDoAlkalmazas.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
-        }
-        public ActionResult TodoList()
-        {
-            //Adatok
-            var lista = new List<string>
-            {
-                "Cukor",
-                "Só",
-                "Kávé",
-                "Dió"
-            };
-            //ViewBag.Lista = lista;
-
-            return View(lista);
         }
     }
 }

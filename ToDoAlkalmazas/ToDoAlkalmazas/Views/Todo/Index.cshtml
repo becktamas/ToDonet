@@ -1,0 +1,28 @@
+﻿@model List<ToDoAlkalmazas.Models.TodoItem>
+    @*Ez a függvény paramétere*@ 
+@{
+    ViewBag.Title = "TodoList";
+}
+
+<h2>Bevásárlólista!</h2>
+
+
+@*Ciklus*@
+<ol>
+    @foreach (var TodoItem in Model)
+    {
+        if (TodoItem.Done)
+        {
+            <li><strike>@TodoItem.Name</strike></li>
+        }
+        else
+        {
+            <li>@TodoItem.Name</li>
+        }
+
+    }
+</ol>
+@*Mindkét megoldás jó*@
+<a href="/todo/create">Új felvitele</a>
+@*A saját kontrolllerben keresi*@
+@Html.ActionLink("Új adat", "Create");

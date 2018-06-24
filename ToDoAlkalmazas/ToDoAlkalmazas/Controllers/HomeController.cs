@@ -33,8 +33,9 @@ namespace ToDoAlkalmazas.Controllers
                 "Kávé",
                 "Dió"
             };
-            ViewBag.Lista = lista;
-            return View();
+            //ViewBag.Lista = lista;
+
+            return View(lista);
         }
     }
 }

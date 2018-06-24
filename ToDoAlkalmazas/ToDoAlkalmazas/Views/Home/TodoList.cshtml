@@ -1,4 +1,5 @@
-﻿
+﻿@model List<String>
+    @*Ez a függvény paramétere*@ 
 @{
     ViewBag.Title = "TodoList";
 }
@@ -8,7 +9,7 @@
 
 @*Ciklus*@
 <ol>
-    @foreach (var elem in ViewBag.Lista)
+    @foreach (var elem in Model)
     {
         <li>@elem</li>
     }

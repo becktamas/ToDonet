@@ -12,10 +12,10 @@ namespace ToDoAlkalmazas.Models
         /// </summary>
         public static List<TodoItem> Lista = new List<TodoItem>
         {
-            new TodoItem() { Name = "Cukor", Done = true },
-            new TodoItem() { Name = "Só", Done = false },
-            new TodoItem() { Name = "Kávé", Done = false },
-            new TodoItem() { Name = "Dió", Done = true }
+            new TodoItem() { Id = 1, Name = "Cukor", Done = true },
+            new TodoItem() { Id = 2, Name = "Só", Done = false },
+            new TodoItem() { Id = 3, Name = "Kávé", Done = false },
+            new TodoItem() { Id = 4, Name = "Dió", Done = true }
         };
 
     }

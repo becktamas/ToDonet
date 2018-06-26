@@ -9,7 +9,7 @@ namespace ToDoAlkalmazas.Controllers
 {
     public class TodoController : Controller
     {
-        [HttpGet, HttpPost]
+        //[HttpPost]
         public ActionResult Index()
         {
             //Adatok
@@ -24,11 +24,11 @@ namespace ToDoAlkalmazas.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(string Name)
+        public ActionResult Create(string Name, bool isDone)
         {
             if(!string.IsNullOrEmpty(Name))
             {
-                MyDb.Lista.Add(new TodoItem() { Name = Name, Done = true });
+                MyDb.Lista.Add(new TodoItem() { Name = Name, Done = isDone});
                 //Adatok mentése és vissza az Index-re
                 return RedirectToAction("Index");
             }

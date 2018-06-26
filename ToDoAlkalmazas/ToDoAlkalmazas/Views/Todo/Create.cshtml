@@ -5,8 +5,11 @@
 
 <h2>Create</h2>
 <form method="post">
-    <input name="Name"/>
+    <input name="Name">
+    @*<input name="isDone" type="checkbox" />*@
     @*<input type="submit" value="Mentés"/><br />*@
+    @Html.CheckBox("isDone")
+    @*<input id="isDone" name="isDone" type="checkbox" value="true">*@
     <button>Mentés</button>
 </form>
 

@@ -2,14 +2,18 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Új elem felvitele</h2>
 <form method="post">
-    <input name="Name">
+    Név: <input name="Name">
     @*<input name="isDone" type="checkbox" />*@
     @*<input type="submit" value="Mentés"/><br />*@
-    @Html.CheckBox("isDone")
+    <br />
+    Elvégezve: @Html.CheckBox("isDone")
     @*<input id="isDone" name="isDone" type="checkbox" value="true">*@
-    <button>Mentés</button>
+    <br />
+    <button style="width: 200px; background-color:aqua;border-radius: 15px; text-decoration:double;">
+        Mentés
+    </button>
 </form>
-
+<hr />
 @Html.ActionLink("Mégsem", "Index")

@@ -50,6 +50,7 @@ namespace ToDoAlkalmazas.Controllers
             //MyDb.Lista.Where(x => x.Id == id);//Egy új listát gyárt
             var Item = db.TodoItems.Single(x => x.Id == id);//Pontosan egy ilyen elem van.
             //var Item = MyDb.Lista.SingleOrDefault(x => x.Id == id);//Ha nem biztos hogy pontosan egy ilyen elem van.
+            //if (Item == null){}
             //ezt módosítjuk
 
             return View(Item);
